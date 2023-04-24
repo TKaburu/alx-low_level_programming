@@ -1,18 +1,21 @@
 #include <stdio.h>
 /*
- * main - Entry Point
- * Description - A program that prints alphabet in lowercase
+ * main - Entry point
+ *Description: Thi program prints the alphabets in lowercse
  * Return: Always (0)
- */
+*/
+
+
 int main(void)
 {
 	int n = 97;
+
 
 	while (n <= 122)
 	{
 		putchar(n);
 		n++;
+		putchar('\n');
 	}
-	putchar('\n');
 	return (0);
 }
