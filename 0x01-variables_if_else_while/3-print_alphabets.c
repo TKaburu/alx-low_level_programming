@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - Entry point
  * Description: Prints the alphabet in lowercase, and then in uppercase.
  * Return: Always 0 (Success)
@@ -19,5 +19,6 @@ int main(void)
 		putchar(o);
 		o++;
 	}
+	putchar ('\n');
 	return (0);
 }
