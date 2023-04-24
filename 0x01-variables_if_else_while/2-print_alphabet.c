@@ -1,7 +1,7 @@
 #include <stdio.h>
-/*
+/**
  * main - Entry point
- *Description: Thi program prints the alphabets in lowercse
+ *Description: This program prints the alphabets in lowercse
  * Return: Always (0)
 */
 
