@@ -1,36 +1,38 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Description: prints all possible different combinations of two digits.
- * Returns: Always (0)
+ *main-program entry point.
+ *Return:0 success, non zero fail
  */
 int main(void)
 {
-	int c = 0;
-	int f_d;
-	int m_d;
-	int l_d;
+	int i, k = '0', j;
 
-	while (c <= 999)
+	for (i = '0'; i <= '9'; i++)
 	{
-		f_d = (c / 100 + '0');
-		m_d = (c / 10 % 10 + '0');
-		l_d = (c % 10 + '0');
-
-		if ((f_d < m_d) && (m_d < l_d))
+		for (j = k; j <= '9'; j++)
 		{
-			putchar(f_d);
-			putchar(m_d);
-			putchar(l_d);
-
-			if (c != 789)
+			if (i != j)
+			{
+				putchar(i);
+				putchar(j);
+			}
+			if (i == j)
+			{
+				continue;
+			}
+			if (i == '8' && j == '9')
+			{
+				break;
+			}
+			else
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
-		c++;
+		k++;
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
+
