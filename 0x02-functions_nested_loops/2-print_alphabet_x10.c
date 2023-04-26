@@ -2,18 +2,22 @@
 /**
  * print_alphabet_x10 - Print alphabet 10 times in lowercase
  *
- * Return: Always (0)
+ * Return: Always o
  */
 void print_alphabet_x10(void)
 {
 	int a;
-	int b;
+	int n;
 
-	for (a = 1; a <= 10; a++)
-		for (b = 97; b <= 122; b++)
+	n = 0;
+	while (n <= 10)
+	{
+		for (a = 'a';  a <= 'z'; a++)
 		{
-			_putchar(b);
+			_putchar(a);
 		}
+
+		n++;
 		_putchar('\n');
-		return (0);
+	}
 }
