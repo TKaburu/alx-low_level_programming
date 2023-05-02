@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_rev - print revere
+ * print_rev - print out string in revere
  * @str: string to be printed
  */
+
 void print_rev(char *s)
 {
 	int w = 0;
