@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
- * _puts- prints a string and a new line
+ * print_rev - print revere
  * @str: string to be printed
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
 	int w = 0;
-	int t;
 
-	while (str[w] != '\0')
+	while (w >= 0)
 	{
+		if (s[w] == '\0')
+		{
+			break;
+		}
+
 		w++;
 	}
-
-	for (t = 'w'-1; t >= 0; t--)
+	for (w = 1; w >= 0; w--)
 	{
-		_putchar(str[t]);
+		_putchar(s[w]);
 	}
-	_putchar('\n');
 }
