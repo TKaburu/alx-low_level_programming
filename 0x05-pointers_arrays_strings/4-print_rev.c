@@ -2,7 +2,7 @@
 
 /**
  * print_rev - print out string in revere
- * @str: string to be printed
+ * @s: string to be printed
  */
 
 void print_rev(char *s)
@@ -21,7 +21,5 @@ void print_rev(char *s)
 		_putchar(*s);
 		s--;
 	}
-
 	_putchar('\n');
 }
-
