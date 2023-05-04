@@ -6,15 +6,16 @@
  * @src: value of input
  * @dest: value of input
  *
- * Return void
+ * Return 0
  */
 char *_strcat(char *dest, char *src)
 {
-	int len1, t;
+	int t, len1, len2;
 
 	len1 = strlen(dest);
+	len2 = strlen(src);
 
-	for (t = 0; t <= len1; t++)
+	for (t = 0; t <= len2; t++)
 	{
 		dest[len1 + 1] = src[t];
 	}
