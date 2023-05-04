@@ -3,7 +3,7 @@
  * _strncpy - copy a string
  * @dest: input value
  * @src: input value
- * @n: input value
+ * @n: interger input value
  *
  * Return: dest
  */
@@ -16,10 +16,9 @@ char *_strncpy(char *dest, char *src, int n)
 
 		dest[t] = src[t];
 	}
-	if (t < n)
+	for (; t < n; t++)
 	{
 		dest[t] = '\0';
-		t++;
 	}
 return (dest);
 }
