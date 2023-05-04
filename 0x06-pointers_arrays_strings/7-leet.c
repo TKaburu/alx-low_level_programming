@@ -14,7 +14,7 @@ char *leet(char *n)
 	{
 		for (q = 0; q < 10; q++)
 		{
-			if (n[t] == st1[t])
+			if (n[t] == st1[q])
 			{
 				n[t] = st2[q];
 			}
