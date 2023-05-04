@@ -2,11 +2,11 @@
 #include <string.h>
 
 /**
- * _strcat - This  concatenates two strings
+ * *_strcat - This  concatenates two strings
  * @src: value of input
  * @dest: value of input
  *
- * Return 0
+ * Return: 0
  */
 char *_strcat(char *dest, char *src)
 {
@@ -17,7 +17,7 @@ char *_strcat(char *dest, char *src)
 
 	for (t = 0; t <= len2; t++)
 	{
-		dest[len1 + 1] = src[t];
+		dest[len1 + t] = src[t];
 	}
 	return (dest);
 }
