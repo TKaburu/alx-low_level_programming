@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer
- * @str: The string to be capitalized.
+ * print_number - prints out numbers
+ * @n: Interger.
  *
- * Return: A pointer to the changed string.
+ * Return: 0.
  */
 
 void print_number(int n)
