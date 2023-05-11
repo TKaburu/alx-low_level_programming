@@ -1,38 +1,38 @@
 #include "main.h"
 
-/**
- * _sqrt_recursion - This function prints the square root 
- * of a number
- * @n: The bumber whose square root is checked
- *
- * Return: 0
- */
+int actual_sqrt_recursion(int n, int t);
 
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to calculate the square root of
+ *
+ * Return: the resulting square root
+ */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-	{
 		return (-1);
-	}
-	return (n);
-	return (0);
+	return (actual_sqrt_recursion(n, 0));
 }
 
 /**
- * _sqrt - returns the sqare root of a number
- * @n: The number whose quare root is checked
- * @t: number
+ * actual_sqrt_recursion - recurses to find the natural
+ * square root of a number
+ * @n: number to calculate the sqaure root of
+ * @t: iterator
+ *
+ * Return: the resulting square root
  */
-
-int _sqrt(int n, int t)
+int actual_sqrt_recursion(int n, int t)
 {
-	if (t * t == n)
-	{
-		return (t);
-	}
 	if (t * t > n)
 	{
 		return (-1);
 	}
-	return (_sqrt(n, t + 1));
-}	
+	if (t * t == n)
+	{
+		return (t);
+	}
+	return (actual_sqrt_recursion(n, t + 1));
+}
+
