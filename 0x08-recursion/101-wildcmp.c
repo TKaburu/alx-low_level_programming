@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * wildcmp - This function compares two strings
- * @s1: This is a string
- * @s2: This is a second string
+ * wildcmp - This function compares strings
+ * @s1: points to a string
+ * @s2: points to a string
  *
- * Return: 1 if strings are identical, 0 if not
+ * Return: 0
  */
 
 int wildcmp(char *s1, char *s2)
@@ -18,11 +18,11 @@ int wildcmp(char *s1, char *s2)
 	{
 		return (0);
 	}
-	if (*s2 == '*')
+	else if (*s2 == '*')
 	{
-		return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
+		return (wildcmp(s1 + 1, s2) || (wildcmp(s2 + 1, *s1)));
 	}
-	if (*s1 == '\0')
+	else if (*s1 == '\0')
 	{
 		return (*s2 == '\0');
 	}
