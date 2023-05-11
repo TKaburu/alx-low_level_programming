@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * _puts_recusion - This function prints a string
+ * _puts_recursion - This function prints out a string
  * @s: This is a string
  *
  * Return: 0
  */
 
-void _puts_recusion(char *s)
+void _puts_recursion(char *s)
 {
-	if (*s)
+	if (*s != '\0')
 	{
 		_putchar(*s);
-		_puts_recusion(s + 1);
+		_puts_recursion(s + 1);
 	}
 	else
 	{
