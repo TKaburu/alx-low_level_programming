@@ -2,8 +2,8 @@
 
 /**
  * main - This function prints out all function
- * @argc:
- * @argv:
+ * @argc: This is the number of argument in the function
+ * @argv: This is arrays of the argument in the function
  *
  * Return: 0
  */
