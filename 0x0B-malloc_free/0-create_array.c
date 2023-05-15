@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 
 	k = malloc(sizeof(char) * size);
 
-	if (size == 0 && k == 0) /*if both size nd pointer k = 0 the print NULL*/
+	if (size == 0 || k == 0) /*if both size nd pointer k = 0 the print NULL*/
 	{
 		return (NULL);
 	}
@@ -30,5 +30,4 @@ char *create_array(unsigned int size, char c)
 		t++;
 	}
 	return (k); /*Returns the pointer of array since progrm passed*/
-	free(k);
 }
