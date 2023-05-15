@@ -30,4 +30,5 @@ char *create_array(unsigned int size, char c)
 		t++;
 	}
 	return (k); /*Returns the pointer of array since progrm passed*/
+	free (k);
 }
