@@ -76,8 +76,8 @@ char **strtow(char *str)
 		{
 			start = f;
 		}
-		q++;
-	} while (f <= length);
+	} while (f < length);
+		f++;
 	split[q] = NULL;
 	return (split);
 }
