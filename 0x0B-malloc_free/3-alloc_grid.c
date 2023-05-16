@@ -29,10 +29,11 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	do {
+	while (m < height)
+	{
 		t[m] = (int *) malloc(width * sizeof(int));
 		t++;
-	} while (m < height);
+	}
 	if (t[m] == NULL)
 	{
 		while (m >= 0)
@@ -43,13 +44,13 @@ int **alloc_grid(int width, int height)
 		free(t);
 		return (NULL);
 	}
-	while (k < height)
+	for  (k = 0; k < height; k++)
 	{
-		while (f < width)
+		for (f = 0; f < width; f++)
+
 		{
 			t[k][f] = 0;
 		}
-		k++;
 	}
 	return (t);
 }
