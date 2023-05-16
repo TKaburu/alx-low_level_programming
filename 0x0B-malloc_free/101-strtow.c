@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stddef.h>
+#include <stdio.h>
 
 /**
  * count_word - This function counts words
@@ -66,7 +67,7 @@ char **strtow(char *str)
 					*temp++ = str[start++];
 				}
 				*temp = '\0';
-				split[q] = temp - t;
+				split[q] = temp;
 				q++;
 				t = 0;
 			}
@@ -76,7 +77,7 @@ char **strtow(char *str)
 			start = f;
 		}
 		q++;
-	} while (f <= len);
+	} while (f <= length);
 	split[q] = NULL;
 	return (split);
 }
