@@ -24,12 +24,12 @@ char *str_concat(char *s1, char *s2)
 	}
 	/*Get the length of the strings*/
 	m = 0;
-	if (s1[m] != '\0')
+	while (s1[m] != '\0')
 	{
 		m++;
 	}
 	k = 0;
-	if (s2[k] != '\0')
+	while (s2[k] != '\0')
 	{
 		k++;
 	}
