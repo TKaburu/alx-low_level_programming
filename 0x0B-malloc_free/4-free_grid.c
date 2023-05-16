@@ -3,8 +3,8 @@
 
 /**
  * free_grid - This function frees 2 dimentional grid
- * @grid:
- * @height:
+ * @grid: This is a grid
+ * @height: This is the dimention of the grid
  *
  * Returns: (0)
  */
