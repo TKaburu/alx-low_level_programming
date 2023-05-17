@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 /**
-*main - This function return the program name
-*@argc: counts arg passed
-*@argv: Character array of pointers
-*Return: 0
-*/
+ * main - This function prints the number of arguments
+ * @argc: This is the number of argument for function
+ * @argv: This is the number of argument for function
+ *
+ * Return: 0
+ */
 
-
-
-int main(int argc, char *agrv[])
+int main(int argc, char **argv)
 {
 	(void)argc;
-	printf("%s\n", agrv[0]);
+	printf("%s\n", *argv);
 	return (0);
+
 }
