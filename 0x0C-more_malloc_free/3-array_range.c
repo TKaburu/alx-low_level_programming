@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	t = malloc((max - min) + 1 * sizeof(int));
+	t = malloc((max - min + 1) * sizeof(int));
 
 	if (t == NULL)
 	{
@@ -29,7 +29,7 @@ int *array_range(int min, int max)
 	k = 0;
 
 	do {
-		*(t + 1) = min-1;
+		t[k] = min + k;
 		k++;
 	} while (k < max - min + 1);
 
