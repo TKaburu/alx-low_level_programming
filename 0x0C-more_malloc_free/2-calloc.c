@@ -3,7 +3,7 @@
 /**
  * _calloc - This function allocates memory of rray using
  * malloc
- * @nmeb: This is an unsigned int
+ * @nmemb: This is an unsigned int
  * @size: This is an unsigned int
  *
  * Return: pointer otherwise NULL if it fails
@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	
+
 	t = malloc(nmemb * size);
 	/*check if allocation of memory is succesful */
 	if (t == 0)
