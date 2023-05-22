@@ -1,1 +1,1 @@
-This project touches on C propocesor
+This project touches on C prepocesor
