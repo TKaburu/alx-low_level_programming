@@ -19,12 +19,12 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 	}
 
-	m = 0, sum = 0;
+	sum = 0;
 
-	do {
+	for (m = 0; m < n; m++)
+	{
 		sum = sum + va_arg(tk, int);
-		m++;
-	} while (m < n);
+	}
 	va_end(tk);
 
 	return (sum);
