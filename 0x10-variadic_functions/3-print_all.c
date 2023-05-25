@@ -1,56 +1,57 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include "variadic_functions.h"
 
+
+/**
+ * print_all - This function prints anything
+ * @format: This is arguments passed to the function
+ * c: char
+ * i: integer
+ * f: float
+ * s: char *
+ *
+ * Return: void
+ */
 void print_all(const char * const format, ...)
 {
 	va_list tk;
-	const char *m = format;
+	unsigned int m = 0;
 	char c;
-	int i;
+	int n;
 	float f;
 	char *s;
 
 	va_start(tk, format);
-
-	while (*m)
+	while (format != NULL && format[m] != '\0')
 	{
-		c = *m;
-
-		if (c == 'c')
+		switch (format[m])
 		{
-			printf("%c", va_arg(tk, int));
+			case 'c':
+				c = va_arg(tk, int), printf("%c", c);
+				break;
+			case 'i':
+				n = va_arg(tk, int), printf("%d", n);
+				break;
+			case 'f':
+				f = (float) va_arg(tk, double), printf("%f", f);
+				break;
+			case 's':
+				s = va_arg(tk, char *), printf("%s", s != NULL ? s : "(nil)");
+				break;
+			default:
+				m++;
+				continue;
 		}
-		else if (c == 'i')
-			printf("%d", va_arg(tk, int));
-		else if (c == 'f')
-			printf("%f", va_arg(tk, double));
-		else if (c == 's')
-			s = va_arg(tk, char *);
-			if (s == NULL)
-				printf("(nil)");
-			else
-			{
-				printf("%s", s);
-			}
-	}	
 
-	m++;
-	if (*m)
-	{
-		i = 0;
-		while (*m && *m != 'c' && *m != 'i' && *m != 's' && *m != 'f')
+
+		if (format[m + 1] != '\0')
 		{
-			m++;
-			i++;
+			char *sept = ", ";
+
+			printf("%s", sept);
 		}
-		if (i > 0)
-		{
-			printf(", ");
-		}	
+		m++;
 	}
-	}
-
-	va_end(tk);
-	printf("\n");
+	va_end(tk), printf("\n");
 }
-
