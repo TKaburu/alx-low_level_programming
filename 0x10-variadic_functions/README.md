@@ -1,1 +1,1 @@
-Thi project touches on Variadic functions
+This project touches on Variadic functions
