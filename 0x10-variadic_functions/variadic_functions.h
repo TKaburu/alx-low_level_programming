@@ -5,11 +5,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-typedef struct print_d
-{
-	char *c;
-	void (*f_pr)(va_list a);
-} print_d;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
