@@ -4,7 +4,7 @@
 
 /**
   * print_numbers - This function prints numbers
-  * @separator - This is the eparator used in the string
+  * @separator:  This is the separator used in the string
   * @n: number of intergers passed to the function
   *
   * Return: if separator is NULL do not print
@@ -24,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		printf("%d", va_arg(tk, int));
 
-		if (m< n - 1 && separator != NULL)
+		if (m < n - 1 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
