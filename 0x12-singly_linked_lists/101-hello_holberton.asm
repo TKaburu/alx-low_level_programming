@@ -1,6 +1,4 @@
-#include "lists.h"
-
-global    main
+jglobal    main
           extern    printf
 main:
 	  mov   edi, format
