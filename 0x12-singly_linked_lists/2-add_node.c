@@ -16,7 +16,7 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int len;
 
 	for (len = 0; str[len]; len++)
-		continue ;
+		continue;
 	/** allovate memory*/
 	new = malloc(sizeof(list_t));
 
