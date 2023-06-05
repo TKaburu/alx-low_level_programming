@@ -5,7 +5,7 @@
  * of a listsint_t
  * @head: This is a pointer to the head of the list
  * @n: This is an integer
- * 
+ *
  * Return: The adress of new element if succesful
  * otherwise NULL
 */
