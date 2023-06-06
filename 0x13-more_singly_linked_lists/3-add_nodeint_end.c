@@ -5,13 +5,13 @@
  * of node
  * @head: This is a pointer that points to the head of the list
  * @n: This is a constant integer
- * 
+ *
  * Return: Adress of new element otherwise NULL
-*/
+ */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *t;
-	listint_t *p = *head;;
+	listint_t *p = *head;
 
 	t = malloc(sizeof(listint_t));
 
@@ -31,9 +31,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (*head);
 	}
 
-	do {
+	while (p->next != NULL)
+	{
 		p = p->next;
-	} while (p->next != NULL);
-
+	}
 	return (*head);
 }
