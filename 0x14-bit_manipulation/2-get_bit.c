@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_bit - This function returns the value of 
+ * get_bit - This function returns the value of
  * a bit at a given index
  * @n: This is an unsigned long int
  * @index: This is theindex given
