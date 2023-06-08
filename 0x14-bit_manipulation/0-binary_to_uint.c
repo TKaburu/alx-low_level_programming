@@ -17,6 +17,8 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
+	t = 0, res = 0;
+
 	do {
 		if (b[t] == '0')
 		{
