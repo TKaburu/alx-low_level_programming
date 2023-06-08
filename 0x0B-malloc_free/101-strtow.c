@@ -1,83 +1,50 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
-
+#include <string.h>
 /**
- * count_word - This function counts words
- * @s: This is a string
+ * strtow - This function splits a string into words
+ * @str: string
  *
- * Return: The number of words
+ * Return: NULL if fail otherwise pointer
  */
-
-int count_word(char *s)
-{
-	int xmark = 0, k = 0;
-
-	while (*s != '\0')
-	{
-		if (*s == ' ')
-		{
-			xmark = 0;
-		}
-		else if (xmark == 0)
-		{
-			xmark = 1;
-			k++;
-		}
-		s++;
-	}
-	return (k);
-}
-
-/**
- * **strtow - This function splits a string into words
- * @str: This is a string
- *
- * Return: pointer to an array of strings if successful
- * otherwise NULL
- */
-
 char **strtow(char *str)
 {
-	char **split, *temp;
-	int f = 0, q = 0, length = 0, w = 0, t = 0, end = 0, start = 0;
+	char **strtow(char *str)
+{
+	int w = 0, m = 0, k = 0, f, length = 0;;
+	char **t;
 
-	while (*(str + length))
-		length++;
-	w = count_word(str);
-	if (w == 0)
+	if (str == NULL || *str == " ")
 		return (NULL);
-	split = (char **)malloc(sizeof(char *) * (w + 1));
-	if (split == NULL)
+	while (str[m] != "")
+	{
+		if (str[m] != ' ' && (m == 0 || str[m - 1] == ' '))
+			w++;
+		m++
+	}
+	t = (char **)malloc((w + 1) * sizeof(char *));
+	if (t == NULL)
 		return (NULL);
-	do {
-		if (str[f] == ' ' || str[f] == '\0')
+	while (str[m] != '\0')
+	{
+		if (str[m] != ' ')
 		{
-			if (t)
+			if = m;
+			while (str[f] != ' ' && str[f] != '\0')
+				length++, f++;
+			t[k] = (char *)malloc((legth + 1) * sizeof(char));
+			if (t[k] == NULL)
 			{
-				end = f;
-				temp = (char *)malloc(sizeof(char) * (t + 1));
-				if (temp == NULL)
-				{
+				while (k > 0)
 					return (NULL);
-				}
-				while (start < end)
-				{
-					*temp++ = str[start++];
-				}
-				*temp = '\0';
-				split[q] = temp;
-				q++;
-				t = 0;
 			}
+			for (f = 0; f < length; f++, m++)
+				t[k][f] = str[m];
+			t[k][f] = '\0';
+			k++;
 		}
-		else if (t++ == 0)
-		{
-			start = f;
-		}
-	} while (f < length);
-		f++;
-	split[q] = NULL;
-	return (split);
+		else
+			m++;
+	}
+	return (t);
 }

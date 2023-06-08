@@ -1,38 +1,46 @@
-#include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
 
-/**
- * main - entry point
- * @argc: This is an argument
- * @argv: This is an rgument
- *
- * Return: interger
- */
+int isNumber(const char *str) {
+    while (*str) {
+        if (!isdigit(*str))
+            return 0;
+        str++;
+    }
+    return 1;
+}
 
-int main(int argc, char *argv[])
-{
-	int t, k, mult;
+int multiply(int num1, int num2) {
+    return num1 * num2;
+}
 
-	if (argc < 2)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+int main(int argc, char *argv[]) {
+    int *num1, *num2, *mul;
 
-	t = 0, k = 0;
+    if (argc != 3 || !isNumber(argv[1]) || !isNumber(argv[2])) {
+        printf("Error\n");
+        exit(98);
+    }
 
-	while (t < argc)
-	{
-		if (argv[t][k] == 48 || argv[t][k] == 57)
-		{
-			printf("ERROR\n");
-			exit(98);
-		}
-		t++;
-	}
-	mult = atoi(argv[1]) *  atoi(argv[2]);
-	printf("%d\n", mult);
-	return (0);
+    num1 = (int *)malloc(sizeof(int));
+    num2 = (int *)malloc(sizeof(int));
+    mul = (int *)malloc(sizeof(int));
+
+    if (num1 == NULL || num2 == NULL || mul == NULL) {
+        printf("Error allocating memory\n");
+        exit(1);
+    }
+
+    *num1 = atoi(argv[1]);
+    *num2 = atoi(argv[2]);
+    *mul = multiply(*num1, *num2);
+
+    printf("%d\n", *mul);
+
+    free(num1);
+    free(num2);
+    free(mul);
+
+    return 0;
 }
