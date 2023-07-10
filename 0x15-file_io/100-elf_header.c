@@ -1,5 +1,4 @@
 #include "main.h"
-void print_data_vers(unsigned char *e_ident);
 
 /**
  * check_elf - Checks if a file is an ELF file.
@@ -37,6 +36,7 @@ void check_elf(unsigned char *e_ident)
 void print_magic(unsigned char *e_ident)
 {
 	int index;
+
 	printf("  Magic:   ");
 
 	for (index = 0; index < EI_NIDENT; index++)
@@ -101,9 +101,9 @@ void print_data_vers(unsigned char *e_ident)
 			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 	printf("Version: %d%s\n",
-                        e_ident[EI_VERSION],
-                        e_ident[EI_VERSION] ==
-                        EV_CURRENT ? " (current)" : "");
+			e_ident[EI_VERSION],
+			e_ident[EI_VERSION] ==
+			EV_CURRENT ? " (current)" : "");
 }
 
 /**
@@ -114,16 +114,16 @@ void print_data_vers(unsigned char *e_ident)
 void print_osabi(unsigned char *e_ident)
 {
 	printf("OS/ABI: ");
-	switch(e_ident[EI_OSABI])
+	switch (e_ident[EI_OSABI])
 	{
-		case ELFOSABI_NONE: 
+		case ELFOSABI_NONE:
 			printf("UNIX - System V\n");
 			break;
-		case ELFOSABI_HPUX: 
-			printf("UNIX - HP-UX\n"); 
+		case ELFOSABI_HPUX:
+			printf("UNIX - HP-UX\n");
 			break;
-		case ELFOSABI_NETBSD: 
-			printf("UNIX - NetBSD\n"); 
+		case ELFOSABI_NETBSD:
+			printf("UNIX - NetBSD\n");
 			break;
 		case ELFOSABI_LINUX:
 			printf("UNIX - Linux\n");
