@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_dlistint - This function prints all elements of the 
+ * print_dlistint - This function prints all elements of the
  * given doubly list
  * @h: This is the pointer to the head
  *
