@@ -27,8 +27,8 @@ int mul(int a, int b)
 
 /**
  * sub - subtracts two integers
- * @a: int 
- * @b: int 
+ * @a: int
+ * @b: int
  * Return: subtraction of a and b
  */
 
