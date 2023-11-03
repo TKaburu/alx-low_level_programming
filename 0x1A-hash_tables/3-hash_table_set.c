@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - This function adds an element to the hash table
+ * hash_table_set - This function adds elements to the hash table
  * @ht: The hash table
- * @Key: The key
+ * @key: The key which is not an empty string
  * @value: The value associated with the key
  *
- * Return: 1 on success otherwise 0
+ * Return: 1 if successfull otherwise 0
  */
 
 
