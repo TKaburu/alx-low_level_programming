@@ -17,7 +17,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	unsigned int value; /*This is the value sociated with the key */
 
 	value = hash_djb2(key);
-	index = hsh_djb2(value) % size
+	index = value % size;
 
-	return (index)
+	return (index);
 }
