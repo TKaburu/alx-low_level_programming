@@ -38,6 +38,12 @@ int binary_search(int *array, size_t size, int value)
 		/* Get the middle */
 		middle = (left + right) / 2;
 
+		if (array[middle] == value)
+		{
+			printf("Found %d at index: %ld\n", value, middle);
+			return (middle);
+		}		
+
 		/* If value is greater, search in the right half */
 		if (array[middle] < value)
 			left = middle + 1;
